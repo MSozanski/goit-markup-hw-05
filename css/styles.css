@@ -78,6 +78,7 @@ body {
   padding-left: 76px;
   gap: 40px;
   align-items: center;
+  flex-direction: row;
 }
 
 .head .address {
@@ -85,10 +86,6 @@ body {
   margin-left: auto;
   align-items: center;
   gap: 40px;
-}
-.navigation-list {
-  display: flex;
-  flex-direction: row;
 }
 
 .navigation-logo {
@@ -126,6 +123,20 @@ body {
 .address-phone-number:hover,
 .address-phone-number:focus {
   color: var(--ocean);
+  transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.navigation-list .current {
+  position: relative;
+}
+.navigation-list .current::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  background: var(--ocean);
+  border-radius: 2px;
 }
 
 .address-mail {
@@ -159,7 +170,7 @@ body {
   height: 600px;
   background-color: var(--navyblue);
   background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url('https://s3-alpha-sig.figma.com/img/7c8d/46d4/7e83b6c8ee4603ea892aa8aaebb3c5fe?Expires=1694390400&Signature=e5Zs7YjCZ4aYY-zsTHrFp8jQEQfQPMhwm3sEQQbNxaI7v8Y-WgvV6BLTE0jM8M5aCfwOhzbY6TfUsHvZxvtwGrbZy1z4j7CTYosH6aztWR1N3JwFYFJEDczxQJ6BdCK3MqSI0BQihghF1x4Go8NxSg6ZLfvjjBlZ2ReKqelMD0MRufmyT4uDV1J4N0A8314DUA5KSqwyTNHjCnQHnp0kDCCDCXa5IHr-gCVk3~jnJLUZJwCutfYZOJHelqkPOSMjNrFT4rqyTGRpPDP~5KWlGzTOQ6uqg9lUBEkYyjZS8i5zfTyKvw6M6ELcBFxXBUQPC~8StaHu2pcTpZwOm2X2jA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+    url('https://s3-alpha-sig.figma.com/img/7c8d/46d4/7e83b6c8ee4603ea892aa8aaebb3c5fe?Expires=1698624000&Signature=aGT5mwKkYtxeJ5qNd8kCYCpjpk6tlyXxhqmE6oCc2IS1Hy7IgMCgLRA~kX7S7DoM9Jr93JlGVG62akrlSMIRQ-vE9IXuMt0IUcTLXztinrEcHN1GaiopyOLXqv72piSOCHYYSlSZ7rUbfDLuAnpJAI~1yL8xqCtF30YWQ9QxPLbc5Z8gENQ17ik~wSvSva0BYOW9l64m6Mv~1j4SkTKJBZOmdc1NDu~aPzuMauCQNOJt3KfEAyn4RQ-FyQJEBdzBK5XUmqgTjJ1d8oO8hgmrJ2lvqst1Vmu7WbgkA8i4Cu2xD-c~7iHDGppFfjpf45W~BYEjJ7IXfcPa2rXtJbwIqg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
   background-size: cover;
   background-position: center;
 }
@@ -198,9 +209,9 @@ body {
 
 .modal-btn:hover,
 .modal-btn:focus {
-  color: var(--white);
   background-color: var(--ocean);
   cursor: pointer;
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 /* ##### SECOND SECTION ##### */
 .main-list {
@@ -307,14 +318,16 @@ body {
   margin-bottom: 32px;
 }
 
-.main-list-team-icon-background{
+.main-list-team-icon-background {
   background-color: var(--iris);
   border-radius: 50%;
 }
 
-.main-list-team-icon-background:hover {
+.main-list-team-icon-background:hover,
+.main-list-team-icon-background:focus {
   background-color: var(--ocean);
   cursor: pointer;
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .main-list-piciture-icon {
@@ -324,12 +337,14 @@ body {
   fill: var(--lightslate);
 }
 
-.main-list-piciture-icon:hover {
-  border-radius: 4px;
+.main-list-piciture-icon:hover,
+.main-list-piciture-icon:focus {
   border: 1px solid var(--ocean);
-  padding: 16px 32px;
   fill: var(--ocean);
   cursor: pointer;
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ##### END MAIN ##### */
 
@@ -390,9 +405,11 @@ body {
   border-radius: 50%;
 }
 
-.footer-container-social-icon-background:hover {
+.footer-container-social-icon-background:hover,
+.footer-container-social-icon-background:focus {
   background-color: var(--green);
   cursor: pointer;
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 /* ##### END FOOTER ##### */
 
@@ -427,6 +444,9 @@ body {
   cursor: pointer;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  transition-property: color, background, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ##### END FILTR ##### */
@@ -464,11 +484,13 @@ body {
   flex-shrink: 0;
   width: 360px;
 }
-.portfolio-main-list-section:hover {
+.portfolio-main-list-section:hover,
+.portfolio-main-list-section:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   cursor: pointer;
+  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .portfolio-main-list-card {
