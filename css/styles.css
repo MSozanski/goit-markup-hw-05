@@ -123,7 +123,9 @@ body {
 .address-phone-number:hover,
 .address-phone-number:focus {
   color: var(--ocean);
-  transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 .navigation-list .current {
   position: relative;
@@ -211,7 +213,9 @@ body {
 .modal-btn:focus {
   background-color: var(--ocean);
   cursor: pointer;
-  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 /* ##### SECOND SECTION ##### */
 .main-list {
@@ -327,7 +331,9 @@ body {
 .main-list-team-icon-background:focus {
   background-color: var(--ocean);
   cursor: pointer;
-  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .main-list-piciture-icon {
@@ -409,7 +415,9 @@ body {
 .footer-container-social-icon-background:focus {
   background-color: var(--green);
   cursor: pointer;
-  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 /* ##### END FOOTER ##### */
 
@@ -492,7 +500,9 @@ body {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   cursor: pointer;
-  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .portfolio-main-list-card {
