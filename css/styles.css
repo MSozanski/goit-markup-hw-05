@@ -114,6 +114,9 @@ body {
   line-height: 1.5;
   list-style-type: none;
   letter-spacing: 0.32px;
+    transition-property: color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 250ms;
 }
 
 .navigation-list-link:hover,
@@ -123,21 +126,19 @@ body {
 .address-phone-number:hover,
 .address-phone-number:focus {
   color: var(--ocean);
-  transition-property: color;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
+
 }
 .navigation-list .current {
   position: relative;
 }
 .navigation-list .current::after {
-  content: '';
+  content:'';
   position: absolute;
   bottom: -20px;
   left: 0px;
   width: 100%;
   height: 4px;
-  background: var(--ocean);
+  background-color: var(--ocean);
   border-radius: 2px;
 }
 
@@ -151,6 +152,9 @@ body {
   line-height: 1.5;
   letter-spacing: 0.32px;
   color: var(--slate);
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 /* ##### END HEADER ##### */
@@ -555,7 +559,7 @@ transition-property: box-shadow;
   opacity: 1;
   pointer-events: all;
   background-color: var(--navybluemodal);
-  transition: opacity;
+  transition: opacity, visibility;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
