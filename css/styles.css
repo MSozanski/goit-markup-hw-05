@@ -125,6 +125,7 @@ body {
 }
 .navigation-list .current {
   position: relative;
+  color: var(--ocean);
 }
 .navigation-list .current::after {
   content: '';
