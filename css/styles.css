@@ -130,7 +130,7 @@ body {
 .navigation-list .current::after {
   content: '';
   position: absolute;
-  bottom: -20px;
+  bottom: -1px;
   left: 0px;
   width: 100%;
   height: 4px;
