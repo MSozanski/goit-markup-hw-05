@@ -325,10 +325,12 @@ font-style: normal;
 .main-list-team-icon-background {
   background-color: var(--iris);
   border-radius: 50%;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .main-list-team-icon-background:hover,
 .main-list-team-icon-background:focus {
