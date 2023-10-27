@@ -55,10 +55,10 @@ body {
 .head {
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   flex-wrap: wrap;
 }
-.head{
+.head {
   flex-direction: row;
 }
 
@@ -66,7 +66,6 @@ body {
   display: flex;
   flex-direction: row;
   padding: 24px 0 24px 76px;
-  
 }
 
 .navigation-list {
@@ -141,14 +140,14 @@ body {
   line-height: 1.5;
   letter-spacing: 0.32px;
   color: var(--slate);
- transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-style: normal;
 }
-.addres-list{
+.addres-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:40px;
+  gap: 40px;
 }
 
 /* ##### END HEADER ##### */
@@ -169,7 +168,7 @@ font-style: normal;
   padding: 188px 457px;
   max-width: 1440px;
   height: 600px;
-  margin:auto;
+  margin: auto;
   background-color: var(--navyblue);
   background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url('https://s3-alpha-sig.figma.com/img/7c8d/46d4/7e83b6c8ee4603ea892aa8aaebb3c5fe?Expires=1698624000&Signature=aGT5mwKkYtxeJ5qNd8kCYCpjpk6tlyXxhqmE6oCc2IS1Hy7IgMCgLRA~kX7S7DoM9Jr93JlGVG62akrlSMIRQ-vE9IXuMt0IUcTLXztinrEcHN1GaiopyOLXqv72piSOCHYYSlSZ7rUbfDLuAnpJAI~1yL8xqCtF30YWQ9QxPLbc5Z8gENQ17ik~wSvSva0BYOW9l64m6Mv~1j4SkTKJBZOmdc1NDu~aPzuMauCQNOJt3KfEAyn4RQ-FyQJEBdzBK5XUmqgTjJ1d8oO8hgmrJ2lvqst1Vmu7WbgkA8i4Cu2xD-c~7iHDGppFfjpf45W~BYEjJ7IXfcPa2rXtJbwIqg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
@@ -328,29 +327,38 @@ font-style: normal;
   display: flex;
   justify-content: center;
   align-items: center;
- transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .main-list-team-icon-background:hover,
 .main-list-team-icon-background:focus {
   background-color: var(--ocean);
   cursor: pointer;
 }
+.main-list-piciture {
+  width: 168px;
+  height: 88px;
+}
 
-.main-list-piciture-icon {
+.main-list-piciture-link {
   border-radius: 4px;
   border: 1px solid var(--lightslate);
-  padding: 16px 32px;
-  fill: currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--lightslate);
   transition-property: border-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-list-piciture-icon:hover,
-.main-list-piciture-icon:focus {
+.main-list-piciture-icon {
+  padding: 16px 32px;
+  fill: currentColor;
+}
+
+.main-list-piciture-link:hover,
+.main-list-piciture-link:focus {
   border-color: var(--ocean);
   color: var(--ocean);
   cursor: pointer;
@@ -366,7 +374,7 @@ font-style: normal;
   background: var(--navyblue);
   padding-top: 101.5px;
   max-width: 1440px;
-  margin:auto
+  margin: auto;
 }
 
 .footer-mission {
