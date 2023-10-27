@@ -342,16 +342,17 @@ font-style: normal;
   border-radius: 4px;
   border: 1px solid var(--lightslate);
   padding: 16px 32px;
-  fill: var(--lightslate);
-  transition-property: border, fill;
+  fill: currentColor;
+  color: var(--lightslate);
+  transition-property: border-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-list-piciture-icon:hover,
 .main-list-piciture-icon:focus {
-  border: 1px solid var(--ocean);
-  fill: var(--ocean);
+  border-color: var(--ocean);
+  color: var(--ocean);
   cursor: pointer;
 }
 /* ##### END MAIN ##### */
@@ -409,16 +410,19 @@ font-style: normal;
   gap: 16px;
 }
 
-.footer-container-social-icon-background {
+.footer-container-social-icon-link {
   background-color: var(--iris);
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
 
-.footer-container-social-icon-background:hover,
-.footer-container-social-icon-background:focus {
+.footer-container-social-icon-link:hover,
+.footer-container-social-icon-link:focus {
   background-color: var(--green);
   cursor: pointer;
 }
