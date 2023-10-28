@@ -28,6 +28,7 @@ body {
 .link {
   text-decoration: none;
   list-style-type: none;
+  display: block;
 }
 
 .container {
@@ -65,7 +66,8 @@ body {
 .navigation {
   display: flex;
   flex-direction: row;
-  padding: 24px 0 24px 76px;
+  align-items: center;
+  padding: 0 0 0 76px;
 }
 
 .navigation-list {
@@ -109,6 +111,7 @@ body {
   line-height: 1.5;
   list-style-type: none;
   letter-spacing: 0.32px;
+  padding: 24px 0;
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
@@ -582,10 +585,11 @@ body {
 /* ##### MODAL #####*/
 .modal-window {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
+  inset: 0 0 auto;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -603,34 +607,49 @@ body {
 }
 
 .modal-body {
+  position: absolute;
   background-color: var(--dairy);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close {
   background: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
-  position: relative;
-  top: 36px;
-  left: calc(100% - 36px);
-}
-.modal-close-bg {
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--cornflower);
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
-  z-index: 1;
-  position: absolute;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--ocean);
+  border: none;
+
+}
+
 .modal-close-x {
   fill: var(--navyblue);
   width: 8px;
   height: 8px;
   z-index: 2;
   position: absolute;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ##### END-MODAL #####*/
