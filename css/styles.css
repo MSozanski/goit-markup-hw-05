@@ -49,7 +49,6 @@ body {
 .header {
   border-bottom: 1px solid var(--cornflower);
   background: var(--white);
-  max-width: 1440px;
   margin: auto;
 }
 
@@ -160,11 +159,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1440px;
   margin: auto;
 }
 .main > .section {
-  padding: 120px 0px 0 0px;
+  margin: 120px 0px 0 0px;
 }
 
 .main > .section:first-child {
@@ -233,7 +231,7 @@ body {
   font-weight: 500;
   line-height: 1.143;
   letter-spacing: 0.03em;
-  margin-bottom: 8px;
+  margin: 8px 0;
   text-transform: capitalize;
 }
 
@@ -256,21 +254,19 @@ body {
   border-radius: 4px;
   background: var(--cloud);
   padding: 24px 100px;
+  display: block;
 }
 
-/* ##### SECOND SECTION EDN ##### */
+/* ##### SECOND SECTION END ##### */
 
 /* ##### THIRD/FOURTH SECTION ##### */
-.main > .section:nth-child(3) {
-  padding-bottom: 120px;
-}
 
 .main > .section:nth-child(4) {
   background: var(--cloud, #f4f4fd);
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
 .main > .section:nth-child(5) {
-  padding-bottom: 120px;
+  margin: 120px;
 }
 
 .main-texth2 {
@@ -372,11 +368,12 @@ body {
 .footer .logo-footer {
   color: var(--cloud);
   font-weight: 800;
+  display: flex;
+  margin-bottom: 17.5px;
 }
 .footer {
   background: var(--navyblue);
-  padding-top: 101.5px;
-  max-width: 1440px;
+  padding: 101.5px 0 100px 0;
   margin: auto;
 }
 
@@ -390,7 +387,7 @@ body {
   height: 72px;
 }
 .footer-container-logo {
-  padding-right: 120px;
+  margin-right: 120px;
 }
 
 .footer-container-social {
@@ -405,6 +402,8 @@ body {
   line-height: 24px;
   letter-spacing: 0.32px;
   color: var(--white);
+  display: flex;
+  margin-bottom: 16px;
 }
 .footer-container-social-h3::first-letter {
   text-transform: uppercase;
@@ -412,7 +411,6 @@ body {
 
 .footer > .container {
   display: flex;
-  padding-bottom: 100px;
 }
 .footer-container-social-icon {
   display: flex;
@@ -447,7 +445,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
-  padding: 96px 0 72px 0;
+  margin: 96px 0 72px 0;
 }
 
 .search-btn {
@@ -501,7 +499,10 @@ body {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
-  padding-bottom: 120px;
+}
+
+.main-portfolio > .main-portfolio-section{
+  margin-bottom: 120px;
 }
 
 .portfolio-main-list-text {
@@ -543,6 +544,9 @@ body {
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+}
+.portfolio-main-image-block{
+  display: block;
 }
 
 .portfolio-main-list-card {
